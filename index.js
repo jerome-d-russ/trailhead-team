@@ -52,7 +52,6 @@ function getTrailheadStats(ttResponse, ttUrl){
             ttResponse.write("<img src=\"" + this.src + "\"/>\n");
           });
 
-          ttResponse.write("<img src=\"https://developer.salesforce.com/resource/images/trailhead/badges/modules/trailhead_module_lightning_process_automation.png\"/>");
           ttResponse.write("</div>");
           ttResponse.write("</div>");
           ttResponse.write("</body>");
