@@ -12,7 +12,8 @@ var server = http.createServer(function(request, ttResponse) {
   }
 });
 
-server.listen(8080);
+var port = process.env.port || 1337;
+server.listen(port);
 console.log("Server is listening");
 
 function getTrailheadStats(ttResponse, ttUrl){
