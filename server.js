@@ -12,7 +12,7 @@ var server = http.createServer(function(request, ttResponse) {
   }
 });
 
-server.listen(80);
+server.listen(8080);
 console.log("Server is listening");
 
 function getTrailheadStats(ttResponse, ttUrl){
