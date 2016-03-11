@@ -2,6 +2,7 @@ var http = require("http");
 var https = require('https');
 
 var server = http.createServer(function(request, ttResponse) {
+  console.log(request.url);
   if(request.url.substr(0,6) == "/?url="){
     ttResponse.writeHead(200, {"Content-Type": "text/html"});
     ttResponse.write("<html>");
@@ -12,7 +13,8 @@ var server = http.createServer(function(request, ttResponse) {
   }
 });
 
-server.listen(80);
+var port = process.env.port || 1337;
+server.listen(port, '0.0.0.0');
 console.log("Server is listening");
 
 function getTrailheadStats(ttResponse, ttUrl){
